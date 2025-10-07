@@ -7,6 +7,7 @@ table KPI
 		lineageTag: 90d22ebd-e687-4532-b394-e34c89c4abd4
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
+	///  Shows category volume or a formatted percent depending on KPI selection (1 => Category Volume, 3 => Units YTD Var %)
 	measure KPI02 = IF(SUM('KPI'[KPI])=1,(CALCULATE([Total Category Volume],'Date'[Running Year]=1)),IF(SUM('KPI'[KPI])=2," ",IF(SUM('KPI'[KPI])=3,CONCATENATE(LEFT([Total Units YTD Var %2],3),"%"))))
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 0eddb8ef-cca5-4a04-8f68-f3bcc4985fbc
