@@ -104,4 +104,3 @@ table Product
 
 	annotation PBI_ResultType = Exception
 
-
