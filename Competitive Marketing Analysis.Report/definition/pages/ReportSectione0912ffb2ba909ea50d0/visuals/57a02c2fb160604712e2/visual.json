@@ -37,12 +37,6 @@
                       "fontFamily": "Segoe (Bold)",
                       "fontSize": "18pt"
                     }
-                  },
-                  {
-                    "value": "Executive Overview",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI"
-                    }
                   }
                 ]
               }
