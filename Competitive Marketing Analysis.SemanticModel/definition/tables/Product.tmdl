@@ -104,3 +104,9 @@ table Product
 
 	annotation PBI_ResultType = Exception
 
+measure KPI01 = IF(SUM('KPI'[KPI])=1,CONCATENATE(LEFT([Total Units YTD Var %2],3),(" % ROI (Return on Investment)")),IF(SUM('KPI'[KPI])=2," ",IF(SUM('KPI'[KPI])=3,CALCULATE([Total Category Volume],'Date'[Running Year]=1))))
+    formatString: \$#,0;(\$#,0);\$#,0
+    lineageTag: 90d22ebd-e687-4532-b394-e34c89c4abd4
+    annotation PBI_FormatHint = {"currencyCulture":"en-US"}
++	annotation Description = "This KPI shows ROI (Return on Investment) as a percentage based on YTD variance."
+
